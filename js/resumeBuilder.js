@@ -46,6 +46,22 @@ var education = {
 	]
 };
 
+// project object
+
+var projects = {
+	"project": [{
+		"projectTitle": "Cambridge Tailors",
+		"projectDate" : "May 2012",
+		"projectDescription": "My main responsibilities were :  1) Hiring/Managing team of web developers, graphics designer and web content writer.   2) Identifying design and code issues within the site and collaborate with web developers to get those issues fixed. Suggest any new changes/ideas which may improve the site.  3) Collaborate with the graphics designer to achieve a good and simple UI.   4) Collaborate with the content writer to ensure the content developed was acceptable to the university team since the project was aimed to assist university students",
+		"projectImage" : "images/project_1.png"
+	}, {
+		"projectTitle": "WordPress Microsites",
+		"projectDate" : "November 2015",
+		"projectDescription": "I was tasked with creating 100 odd wordpress sites from start to finish.  1) Had to come up with domain names and get them registered.  2) Install WordPress on each site and perform optimizations at server-end to make page loads faster and efficient.  3) Develop one-page WordPress sites and put content",
+		"projectImage" : "images/project_2.png"
+	}]
+}
+
 // formatting Bio
 var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
 var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -73,20 +89,52 @@ for(var i = 0; i<bio.skills.length; i++) {
 	$("#header").append(formattedSkills);
 }
 
+// work section
 
-
-for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].jobPosition);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-	var formattedYearsWorked = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
-	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].briefRole);
-	$(".work-entry:last").append(formattedEmployerTitle);
-	$(".work-entry:last").append(formattedLocation);
-	$(".work-entry:last").append(formattedYearsWorked);
-	$(".work-entry:last").append(formattedDescription);
+function displayWork() {
+		for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].jobPosition);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		var formattedYearsWorked = HTMLworkDates.replace("%data%", work.jobs[job].yearsWorked);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].briefRole);
+		$(".work-entry:last").append(formattedEmployerTitle);
+		$(".work-entry:last").append(formattedLocation);
+		$(".work-entry:last").append(formattedYearsWorked);
+		$(".work-entry:last").append(formattedDescription);
+	}
 }
+displayWork();
 
+// location tracker
+
+// $(document).click(function(loc) {
+// 	var xAxis = loc.pageX;
+// 	var yAxis = loc.pageY;
+// 	logClicks(xAxis, yAxis);
+// });
+
+// var loc_array = [];
+
+// function locationizer(work_object) {
+// 	for (job in work_object.jobs) {
+// 		var newLocation = work_object.jobs[job].location;
+// 		loc_array.push(newLocation);
+// 	}
+// 	return loc_array;
+// }
+
+// console.log(locationizer(work));
+
+$('#main').append(internationalizeButton);
+function inName(name) {
+	var splitName = name.trim().split(" ");
+	console.log(splitName);
+	var firstName = splitName[0].slice(0,1).toUpperCase() + splitName[0].slice(1);
+	var secondName = splitName[1].toUpperCase();
+	var internationalizedName = firstName + " " + secondName;
+	return internationalizedName;
+}
 

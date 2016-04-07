@@ -18,7 +18,7 @@ var work = {
     	"jobPosition" : "SEO Lead / Front-End Web Developer",
 		"employer" : "Falcon Living",
 		"yearsWorked" : "January, 2016 - Present",
-		"location" : "Palentine, IL",
+		"location" : "Palatine, IL",
 		"briefRole" : "I have started working for this company since Jan 2016 and I am responsible for managing SEO projects and front-end work."
 	},
 	{

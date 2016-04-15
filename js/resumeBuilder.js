@@ -169,9 +169,9 @@ var projects = {
 
 function displayFooter() {
 		var formattedHTMLMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-		var formattedHTMLEmail = HTMLemail.replace('%data%', bio.contacts.email);
-		var formattedHTMLGitHub = HTMLgithub.replace('%data%', bio.contacts.github);
-		var formattedHTMLTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
+		var formattedHTMLEmail = HTMLemail.replace('%data%', '<a href="mailto:' + bio.contacts.email + '">' + bio.contacts.email + '</a>');
+		var formattedHTMLGitHub = HTMLgithub.replace('%data%', '<a href="' + bio.contacts.github + '" target="_blank">' + bio.contacts.github + '</a>');
+		var formattedHTMLTwitter = HTMLtwitter.replace('%data%', '<a href="' + bio.contacts.twitter + '" target="_blank">' + bio.contacts.twitter + '</a>');
 		var formattedHTMLLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 		$('#footerContacts').append(formattedHTMLMobile);
 		$('#footerContacts').append(formattedHTMLEmail);

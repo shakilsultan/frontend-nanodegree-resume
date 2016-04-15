@@ -227,6 +227,6 @@ img {
   display: block;
 }
 
-#topContacts a {
+#topContacts a, #footerContacts a {
   display: inline;
 }

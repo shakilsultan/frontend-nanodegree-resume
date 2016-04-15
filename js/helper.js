@@ -84,7 +84,7 @@ function logClicks(x,y) {
   );
   console.log('x location: ' + x + '; y location: ' + y);
 }
-
+// TODO: print click locations
 $(document).click(function(loc) {
   var xAxis = loc.pageX;
   var yAxis = loc.pageY;

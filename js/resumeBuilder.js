@@ -1,3 +1,5 @@
+// TODO: add biography object to build header
+
 var bio = {
 	"name": "Shakil Sultan Ali",
 	"role": "Front-End Web Developer",
@@ -37,6 +39,8 @@ var bio = {
 		}
 	}
 };
+
+// TODO: add education object
 
 var education = {
 	"schools": [{
@@ -101,6 +105,8 @@ var education = {
 	}
 };
 
+// OPTIONAL: add courses URL
+
 var onlineCoursesURL = [
 	'https://www.sitepoint.com/premium/courses/introduction-to-html-2897',
 	'http://www.lynda.com/Clear-tutorials/Business-Etiquette-Phone-Email-Text/365216-2.html',
@@ -108,6 +114,8 @@ var onlineCoursesURL = [
 	'http://www.lynda.com/Business-Skills-tutorials/Improving-Your-Judgment/162446-2.html',
 	'http://www.lynda.com/Business-skills-tutorials/Conflict-Resolution-Fundamentals/107420-2.html'
 ];
+
+// TODO: add work object
 
 var work = {
 	"jobs": [{
@@ -140,6 +148,8 @@ var work = {
 	}
 };
 
+// TODO: add projects object
+
 var projects = {
 	"projects": [{
 		"title": "Cambridge Tailors",
@@ -167,6 +177,8 @@ var projects = {
 	}
 };
 
+// TODO: display footer
+
 function displayFooter() {
 	var formattedHTMLMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
 	var formattedHTMLEmail = HTMLemail.replace('%data%', '<a href="mailto:' + bio.contacts.email + '">' + bio.contacts.email + '</a>');
@@ -180,11 +192,16 @@ function displayFooter() {
 	$('#footerContacts').append(formattedHTMLLocation);
 }
 
+// TODO: construct page using display() and displayFooter() function
+
 bio.display();
 projects.display();
 education.display();
 work.display();
 displayFooter();
+
+// TODO: display Google Map
+
 $('#mapDiv').append(googleMap);
 
 

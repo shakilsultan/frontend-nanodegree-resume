@@ -212,3 +212,21 @@ span {
     display: block;
   }
 }
+
+/* defining custom CSS below */
+
+#online-classes {
+  text-align: center;
+  border-bottom: 1px solid #999;
+}
+
+/* aligning images to center */
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#topContacts a {
+  display: inline;
+}

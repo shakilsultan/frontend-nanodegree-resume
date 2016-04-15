@@ -74,7 +74,7 @@ var education = {
 		"url": "http://www.lynda.com/ViewCertificate/7780EF2AE61340BBA1887AB39C5FF422"
 	}],
 	"display": function() {
-			for (school in education.schools) {
+		for (school in education.schools) {
 			$('#education').append(HTMLschoolStart);
 			var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[school].name);
 			var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
@@ -102,11 +102,11 @@ var education = {
 };
 
 var onlineCoursesURL = [
-			'https://www.sitepoint.com/premium/courses/introduction-to-html-2897',
-			'http://www.lynda.com/Clear-tutorials/Business-Etiquette-Phone-Email-Text/365216-2.html',
-			'http://www.lynda.com/Business-Business-Skills-tutorials/Learning-Assertive/175640-2.html',
-			'http://www.lynda.com/Business-Skills-tutorials/Improving-Your-Judgment/162446-2.html',
-			'http://www.lynda.com/Business-skills-tutorials/Conflict-Resolution-Fundamentals/107420-2.html'
+	'https://www.sitepoint.com/premium/courses/introduction-to-html-2897',
+	'http://www.lynda.com/Clear-tutorials/Business-Etiquette-Phone-Email-Text/365216-2.html',
+	'http://www.lynda.com/Business-Business-Skills-tutorials/Learning-Assertive/175640-2.html',
+	'http://www.lynda.com/Business-Skills-tutorials/Improving-Your-Judgment/162446-2.html',
+	'http://www.lynda.com/Business-skills-tutorials/Conflict-Resolution-Fundamentals/107420-2.html'
 ];
 
 var work = {
@@ -124,7 +124,7 @@ var work = {
 		"description": "Over the course of 6.5 years, I had held several positions and became Senior Webmaster as well as being responsible for hiring/training other employees."
 	}],
 	"display": function() {
-			for (job in work.jobs) {
+		for (job in work.jobs) {
 			$('#workExperience').append(HTMLworkStart);
 			var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
 			var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
@@ -154,30 +154,30 @@ var projects = {
 	}],
 	"display": function() {
 		for (displayProject in projects.projects) {
-		$('#projects').append(HTMLprojectStart);
-		var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects.projects[displayProject].title);
-		var formattedProjectDates = HTMLprojectDates.replace('%data%', projects.projects[displayProject].dates);
-		var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects.projects[displayProject].description);
-		$('.project-entry:last').append(formattedProjectTitle);
-		$('.project-entry:last').append(formattedProjectDates);
-		$('.project-entry:last').append(formattedProjectDescription);
-		var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[displayProject].images);
-		$('.project-entry:last').append(formattedProjectImage);
+			$('#projects').append(HTMLprojectStart);
+			var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects.projects[displayProject].title);
+			var formattedProjectDates = HTMLprojectDates.replace('%data%', projects.projects[displayProject].dates);
+			var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects.projects[displayProject].description);
+			$('.project-entry:last').append(formattedProjectTitle);
+			$('.project-entry:last').append(formattedProjectDates);
+			$('.project-entry:last').append(formattedProjectDescription);
+			var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[displayProject].images);
+			$('.project-entry:last').append(formattedProjectImage);
 		}
 	}
 };
 
 function displayFooter() {
-		var formattedHTMLMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-		var formattedHTMLEmail = HTMLemail.replace('%data%', '<a href="mailto:' + bio.contacts.email + '">' + bio.contacts.email + '</a>');
-		var formattedHTMLGitHub = HTMLgithub.replace('%data%', '<a href="' + bio.contacts.github + '" target="_blank">' + bio.contacts.github + '</a>');
-		var formattedHTMLTwitter = HTMLtwitter.replace('%data%', '<a href="' + bio.contacts.twitter + '" target="_blank">' + bio.contacts.twitter + '</a>');
-		var formattedHTMLLocation = HTMLlocation.replace('%data%', bio.contacts.location);
-		$('#footerContacts').append(formattedHTMLMobile);
-		$('#footerContacts').append(formattedHTMLEmail);
-		$('#footerContacts').append(formattedHTMLGitHub);
-		$('#footerContacts').append(formattedHTMLTwitter);
-		$('#footerContacts').append(formattedHTMLLocation);
+	var formattedHTMLMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+	var formattedHTMLEmail = HTMLemail.replace('%data%', '<a href="mailto:' + bio.contacts.email + '">' + bio.contacts.email + '</a>');
+	var formattedHTMLGitHub = HTMLgithub.replace('%data%', '<a href="' + bio.contacts.github + '" target="_blank">' + bio.contacts.github + '</a>');
+	var formattedHTMLTwitter = HTMLtwitter.replace('%data%', '<a href="' + bio.contacts.twitter + '" target="_blank">' + bio.contacts.twitter + '</a>');
+	var formattedHTMLLocation = HTMLlocation.replace('%data%', bio.contacts.location);
+	$('#footerContacts').append(formattedHTMLMobile);
+	$('#footerContacts').append(formattedHTMLEmail);
+	$('#footerContacts').append(formattedHTMLGitHub);
+	$('#footerContacts').append(formattedHTMLTwitter);
+	$('#footerContacts').append(formattedHTMLLocation);
 }
 
 bio.display();

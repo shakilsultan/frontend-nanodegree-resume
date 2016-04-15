@@ -213,19 +213,21 @@ span {
   }
 }
 
-/* defining custom CSS below */
+/* OPTIONAL: custom css; */
 
 #online-classes {
   text-align: center;
   border-bottom: 1px solid #999;
 }
 
-/* aligning images to center */
+/* OPTIONAL: align images to center */
 img {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
+
+/* OPTIONAL: set anchor's display property to inline */
 
 #topContacts a, #footerContacts a {
   display: inline;
